@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - "8"
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: qHzcIS71dBQKLrIWo7xXPe2R1SfhZTIxPaxGSJ70+2+ApVnK3we+WpzuHGFheg3qrRR6G+/8NH9GjsXfcxsKE+pcFD1Qn9FBwQ7jo6JHCbsgIIGme95PFDnpPRdKX08YVF2FA2S8VtyEeayZW1xwRAW1pwONVlkpNNo3ThgqHdMSYeF3xYh1x69Aya4km3GsDxA91zxJ8iqWMX/ANmpyfRpTqEU5DoPyJ7ziSBV/4bdNKPQr8QT+EtQv0ccxzOgVi6iK/+oYJJKWbfhffpDfTMaDWgkkqWhc6RrJEqjwxUiv9QifcGkVVUR3bWwf17Gnt7bjPrgJjDtwXqY7MtrOXm6EV19aKk7R1VkFj0vIyPMyX/RugQTfcHNLijQr8R59RfyZiQ7YbA7Ve7+T9/QbFktR+oZOYU2aOuwdTZbx/GXaMlpDOC5btcv8vEscB3SRUzCZXwyzLHleidMznWb6FT5rxozA6C7SynHRfCj48zW2eylBdppcBaHJh1RfltRIeKMPcQ5huHv3bAzbNnlRzpw5zKAvRBT8o6KGSi19r8Rg1UA7v2T75XvdRVFQn9Nq9r/edWBNOsc+TkHMfoSAq0qPfuWuzLPVQk8ywyw6iAhzt3Ej9gGyOs/zK/ebHAgL0hNSx6jgOMpbwoSQh3VtMwCeMKEJ2U/lIta/l89T8vM=
+  app: sleepy-inlet-54713
+  on:
+    repo: tyrcho/tictactoe-board.io

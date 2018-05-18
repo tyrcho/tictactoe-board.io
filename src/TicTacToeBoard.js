@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export class TicTacToeBoard extends React.Component {
     onClick(id) {
         if (this.isActive(id)) {
@@ -17,7 +18,7 @@ export class TicTacToeBoard extends React.Component {
     render() {
         let winner = '';
         if (this.props.ctx.gameover !== null) {
-            winner = <div>Winner: {this.props.ctx.gameover}</div>;
+            winner = <div>Winner: {playerName(this.props.ctx.gameover)}</div>;
         }
 
         const cellStyle = {
@@ -35,7 +36,7 @@ export class TicTacToeBoard extends React.Component {
                 const id = 3 * i + j;
                 cells.push(
                     <td style={cellStyle} key={id} onClick={() => this.onClick(id)}>
-                        {this.props.G.cells[id]}
+                        {playerName(this.props.G.cells[id])}
                     </td>
                 );
             }
@@ -51,4 +52,10 @@ export class TicTacToeBoard extends React.Component {
             </div>
         );
     }
+}
+
+function playerName(cell) {
+    return cell === '0' ? 'X'
+        : cell === '1' ? '0'
+            : '';
 }
